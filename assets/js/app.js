@@ -14,10 +14,10 @@ $(function () {
             //- --------------------------------------------------------------------------------------------------------
 
             //- load pages
-            $('.loadPage').click(function (e) {
-                e.preventDefault();
-                $('.main').load($(this).data('page'));
-            });
+            // $('.loadPage').click(function (e) {
+            //     e.preventDefault();
+            //     $('.main').load($(this).data('page'));
+            // });
             //- --------------------------------------------------------------------------------------------------------
         },
         loadElements: function () {
