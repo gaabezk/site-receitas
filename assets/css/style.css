@@ -10,11 +10,17 @@ body{
 }
 
 .imagem-fundo img{
-    width: 50%;
-    height: 550px;
-    margin: -2px;
-    padding: 0px;
+    display: inline-block;
+    width: 100%;
+    height: 260px;
     padding-top: 20px;
+
+}
+.sobre-produto{
+    display: inline-block;
+    width: 100%;
+    height: 260px;
+    background-color: red;
 }
 
 @media(max-width:880px){
@@ -171,3 +177,34 @@ h1{
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 /* - end preloader - */
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
+
+
+.navegacao{
+
+}
+
+.navegacao__menu{
+    float: right;
+
+     
+}
+
+.menu__item{
+    display: inline-block;
+    padding-right: 40px;
+
+}
+
+@media(min-width:881px){
+    .navbar-posicaoL{
+        margin-top: -130px;
+        padding-right: auto;
+    }
+}
+@media(max-width:880px){
+    .navbar-posicaoL{
+        margin-top: -130px;
+        padding-right: auto;
+    }
+}
+    
