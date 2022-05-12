@@ -1,0 +1,24 @@
+Carnes:
+1 - Picanha
+2 - Frango a Passarinho
+3 - Tilapia e Salmao
+
+Bebidas:
+1 - Cocktail de ---
+2 - Caipirinha
+3 - Vitamina de ---
+
+Sobremesas:
+1 - Milkshake
+2 - Baklava
+3 - Torta de ---
+
+Massas:
+1 - Macarrao a Bolonhesa
+2 - Lasanha ---
+3 - Empadão de Frango
+
+Salgados:
+1 - Coxinha de Frango
+2 - Pastel Forno
+3 - Enroladinho de Salsicha
