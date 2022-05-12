@@ -17,20 +17,36 @@ body{
 .imagem-fundo img{
     float: left;
     width: 50%;
-    height: 260px;
+    height: 340px;
 
 }
 .sobre-produto{
     float: right;
     width: 50%;
-    height: 260px;
-    background-color: rgb(221, 1, 5);
+    height: 340px;
+    /* background-color: #dd0105; */
+    background: linear-gradient(94.78deg,#dd0105,#b30003);
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    color: white;
+    line-height: 1.8;
 }
-.sobre-produto p{
+   
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Bold.ttf);
+ }
 
+h1{
+    font-family: Poppins;
+    font-size: 2.1875em;
+    
 }
+h3{
+
+    font-size: 1.3em; 
+}
+    
 
 .h--meio{
     text-align: center;
@@ -54,12 +70,6 @@ body{
 }
 ul,ol{
     font-size: 1.2em;
-}
-h3{
-    font-size: 1.5em;
-}
-h1{
-    font-size: 3em;
 }
 
 .hide{
