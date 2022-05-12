@@ -21,9 +21,10 @@ $(function () {
             //- --------------------------------------------------------------------------------------------------------
         },
         loadElements: function () {
-            $('head').load($('head').data('element'));
-            $('nav').load($('nav').data('element'));
-            $('footer').load($('footer').data('element'));
+            $('#head').load($('#head').data('element'));
+            $('#navbar').load($('#navbar').data('element'));
+            $('#footer').load($('#footer').data('element'));
+            $('#header').load($('#header').data('element'));
         },
         pageLoading : function (show){
             if (show) {
