@@ -25,7 +25,6 @@ $(function () {
         loadElements: function () {
             $('#navbar').load($('#navbar').data('element'));
             $('#footer').load($('#footer').data('element'));
-            $('#header').load($('#header').data('element'));
         },
         pageLoading: function (show) {
             if (show) {
