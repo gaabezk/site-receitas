@@ -2,22 +2,24 @@ var app;
 $(function () {
     app = {
         init: function () {
+            app.loadElements();
+            app.loadPage();
             app.setEvents();
         },
         setEvents: function () {
-            app.loadElements();
-
             //- disable link with #
-            $('a[href="#"]').click(function (e){
+            $('body').on('click','a[href="#"]',function (e) {
                 e.preventDefault();
             });
             //- --------------------------------------------------------------------------------------------------------
 
             //- load pages
-            // $('.loadPage').click(function (e) {
-            //     e.preventDefault();
-            //     $('.main').load($(this).data('page'));
-            // });
+            $('body').on('click', '.loadPage', function (e) {
+                e.preventDefault();
+                let page = $(this).data('page');
+                app.setPage(page);
+                $('#main').load('./pages/' + page + '.html');
+            });
             //- --------------------------------------------------------------------------------------------------------
         },
         loadElements: function () {
@@ -25,13 +27,33 @@ $(function () {
             $('#footer').load($('#footer').data('element'));
             $('#header').load($('#header').data('element'));
         },
-        pageLoading : function (show){
+        pageLoading: function (show) {
             if (show) {
                 $('#preloaderPage').removeClass('hide');
             } else {
                 $('#preloaderPage').addClass('hide');
             }
         },
+        loadPage: function () {
+            let getPage = app.getPage('page');
+            let page = (getPage) ? './pages/' + getPage + '.html' : $('#main').data('page');
+            $('#main').load(page);
+        },
+        getPage: function getUrlParameter(sParam) {
+            let searchParams = new URLSearchParams(window.location.search)
+            if (searchParams.has(sParam)) {
+                return searchParams.get(sParam)
+            }
+            return false;
+        },
+        setPage: function (page) {
+            if(!(document.location.href.indexOf('page='+page) > -1)){
+                let queryParams = new URLSearchParams(window.location.search);
+                queryParams.set("page", page);
+                history.replaceState(null, null, "?"+queryParams.toString());
+            }
+
+        }
     };
     app.init();
 });

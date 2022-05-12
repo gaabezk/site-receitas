@@ -9,17 +9,14 @@ body{
     -o-animation: fadein 3s; /* Opera */
 }
 
-.imagem-fundo{
-    
-}
-
-.imagem1, .imagem2{
+.imagem-fundo img{
     width: 50%;
     height: 550px;
     margin: -2px;
     padding: 0px;
-    padding-top: 99px;
+    padding-top: 20px;
 }
+
 @media(max-width:880px){
     .imagem1, .imagem2{
         display: block;
