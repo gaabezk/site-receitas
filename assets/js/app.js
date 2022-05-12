@@ -21,7 +21,6 @@ $(function () {
             //- --------------------------------------------------------------------------------------------------------
         },
         loadElements: function () {
-            $('#head').load($('#head').data('element'));
             $('#navbar').load($('#navbar').data('element'));
             $('#footer').load($('#footer').data('element'));
             $('#header').load($('#header').data('element'));
