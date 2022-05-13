@@ -17,8 +17,12 @@ $(function () {
             $('body').on('click', '.loadPage', function (e) {
                 e.preventDefault();
                 let page = $(this).data('page');
-                app.setPage(page);
-                $('#main').load('./pages/' + page + '.html');
+                if(app.validePage(page)){
+                    app.pageLoading(true);
+                    app.setPage(page);
+                    $('#main').load('./pages/' + page + '.html');
+                    app.pageLoading(false);
+                }
             });
             //- --------------------------------------------------------------------------------------------------------
         },
@@ -35,7 +39,7 @@ $(function () {
         },
         loadPage: function () {
             let getPage = app.getPage('page');
-            let page = (getPage) ? './pages/' + getPage + '.html' : $('#main').data('page');
+            let page = (getPage && app.validePage(getPage)) ? './pages/' + getPage + '.html' : $('#main').data('page');
             $('#main').load(page);
         },
         getPage: function getUrlParameter(sParam) {
@@ -52,6 +56,10 @@ $(function () {
                 history.replaceState(null, null, "?"+queryParams.toString());
             }
 
+        },
+        validePage: function (page) {
+            const pages = ["index","bebidas","caipirinha","sobremesas"];
+            return (pages.indexOf(page) > -1);
         }
     };
     app.init();
