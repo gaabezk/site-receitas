@@ -6,12 +6,12 @@ Carnes:
 Bebidas:
 1 - Coquetel de cranberry e laranja flamejante
 2 - Caipirinha
-3 - Vitamina de ---
+3 - Suco de frutas vermelhas
 
 Sobremesas:
-1 - Milkshake
+1 - Mousse de Limão
+1 - Pave de Prestigio
 2 - Baklava
-3 - Torta de ---
 
 Massas:
 1 - Macarrao a Bolonhesa
