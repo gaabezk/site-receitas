@@ -58,7 +58,7 @@ $(function () {
 
         },
         validePage: function (page) {
-            const pages = ["index","bebidas","caipirinha","sobremesas","coquetel","mousse","pave","baklava"];
+            const pages = ["index","bebidas","caipirinha","sobremesas","coquetel","mousse","pave","baklava","suco","macarrao","lasanha","empadao","picanha","frango","tilapia"];
             return (pages.indexOf(page) > -1);
         }
     };
