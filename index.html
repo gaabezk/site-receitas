@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Receita Mania</title>
+    <title>Receita Mania: Seu portal de receitas online</title>
     <link rel="icon" type="image/x-icon" href="./logo.ico">
-    <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css"
           crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -19,15 +19,57 @@
 <!-- PageLoad -->
 
 <!-- NavBar -->
-<div id="navbar" data-element="./elements/navbar.html"></div>
+<nav class="navbar">
+    <div class="container noPading">
+        <ul class="nav">
+            <li class="nav-item">
+                <img src="./assets/img/logo.png" class="loadPage" alt="www" data-page="index">
+            </li>
+            <li class="nav-item">
+                <a href="#" class="loadPage" data-page="bebidas">
+                    <i class="fas fa-martini-glass"></i>
+                    Bebidas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="loadPage" data-page="sobremesas">
+                    <i class="fas fa-cake-slice"></i>
+                    Sobremesas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="loadPage" data-page="massas">
+                    <i class="fas fa-pizza-slice"></i>
+                    Massas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="loadPage" data-page="carnes">
+                    <i class="fas fa-steak"></i>
+                    Carnes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="loadPage" data-page="carnes">
+                    <i class="fas fa-info-circle"></i>
+                    Informações
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <!-- NavBar -->
 
 <!-- Main -->
-<div id="main" data-page="./pages/index.html"></div>
+<div class="main" data-page="./pages/index.html"></div>
 <!-- Main -->
 
 <!-- Footer -->
-<footer id="footer" class="layout-rodape" data-element="./elements/footer.html"></footer>
+<footer class="footer">
+    <div class="container  noPading">
+        <p class="noMagin">&copy; Empresa Receitas Mania Ltda. Todos os direitos reservados - 2022</p>
+    </div>
+</footer>
 <!-- Footer -->
 
 <!-- JavaScript -->

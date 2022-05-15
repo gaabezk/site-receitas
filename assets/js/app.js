@@ -2,7 +2,6 @@ var app;
 $(function () {
     app = {
         init: function () {
-            app.loadElements();
             app.loadPage();
             app.setEvents();
         },
@@ -17,18 +16,27 @@ $(function () {
             $('body').on('click', '.loadPage', function (e) {
                 e.preventDefault();
                 let page = $(this).data('page');
-                if(app.validePage(page)){
+                if(app.validePage(page) && app.getPage('page') !== page){
                     app.pageLoading(true);
                     app.setPage(page);
-                    $('#main').load('./pages/' + page + '.html');
-                    app.pageLoading(false);
+                    setTimeout(() => {
+                        $('.main').load('./pages/' + page + '.html');
+                        $("html, body").animate({ scrollTop: 0 }, "slow");
+                        app.pageLoading(false);
+                    }, 1000)
                 }
             });
             //- --------------------------------------------------------------------------------------------------------
-        },
-        loadElements: function () {
-            $('#navbar').load($('#navbar').data('element'));
-            $('#footer').load($('#footer').data('element'));
+
+            //- Mudar cor do menu
+            $(window).on("scroll", function() {
+                if($(window).scrollTop() > 200) {
+                    $(".navbar").addClass("navbar-color");
+                } else {
+                    $(".navbar").removeClass("navbar-color");
+                }
+            });
+            //- --------------------------------------------------------------------------------------------------------
         },
         pageLoading: function (show) {
             if (show) {
@@ -39,8 +47,8 @@ $(function () {
         },
         loadPage: function () {
             let getPage = app.getPage('page');
-            let page = (getPage && app.validePage(getPage)) ? './pages/' + getPage + '.html' : $('#main').data('page');
-            $('#main').load(page);
+            let page = (getPage && app.validePage(getPage)) ? './pages/' + getPage + '.html' : $('.main').data('page');
+            $('.main').load(page);
         },
         getPage: function getUrlParameter(sParam) {
             let searchParams = new URLSearchParams(window.location.search)

@@ -1,8 +1,9 @@
-*{
-    box-sizing: border-box;
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Bold.ttf);
 }
 
-body{
+body {
     margin: 0;
     animation: fadein 3s;
     -moz-animation: fadein 3s; /* Firefox */
@@ -10,194 +11,126 @@ body{
     -o-animation: fadein 3s; /* Opera */
     min-height: 100vh;
     position: relative;
+    font-family: Poppins, serif;
 }
 
-#main{
+.main {
     margin: 0;
-    background-color: #f5f5f5;
     padding-bottom: 2.5rem;
 }
-.produto{
+
+.produto {
     width: 100%;
 }
 
-.imagen-produto{
+.imagen-produto {
     float: left;
     width: 50%;
 }
 
-.imgposicao{
+.imgposicao {
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
-.receitas{
+.receitas {
     position: relative;
     border-radius: 360px 90px 360px 90px;
     background: linear-gradient(94.78deg, #cb0000, #ff8000);
     color: white;
 }
-.receitas h1{
+
+.receitas h1 {
     padding-top: 4%;
     margin: 0% 10% 2% 40%;
     text-align: left;
 }
-.receitas p{
+
+.receitas p {
     margin: 0% 10% 10% 40%;
     text-align: left;
 }
 
-@media(min-width: 1001px){
-    .receitas{
-        margin: 120px 150px 0px 150px;
-        width: auto;
-        height: 300px;
-    }
-    .ultimo{
-        margin-bottom: 120px;
-    }
-    .receitas p{
-        font-size: 120%;
-    }
-}
-
-@media(max-width: 1000px){
-    .receitas{
-        margin: 20px 0px 0px 0px;
-        width: 100%;
-        height: 200px;
-    }
-    .ultimo{
-        margin-bottom: 55px;
-    }
-    .receitas h1{
-        font-size: 120%;
-    }
-    .receitas p{
-        font-size: 77%;
-    }
-    .sobre-produto h1{
-        font-size: 130%;
-    }
-}
-.receitas a{
+.receitas a {
     text-decoration: rgb(10, 10, 10);
     color: #ffffff;
     text-shadow: 1px 0px 0px #818181;
 }
-.receitas a:hover{
+
+.receitas a:hover {
     color: #ffffff;
     text-shadow: 1px 1px 6px #000000;
 }
 
-.imagen-produto img{
+.imagen-produto img {
     width: 100%;
     height: 340px;
 
 }
-.sobre-produto{
+
+.sobre-produto {
     float: left;
     width: 50%;
     height: 340px;
     /* background-color: #dd0105; */
-    background: linear-gradient(94.78deg,#dd0105,#b30003);
+    background: linear-gradient(94.78deg, #dd0105, #b30003);
     padding: 10px;
     text-align: left;
     color: white;
     line-height: 1.8;
 }
-   
-@font-face {
-    font-family: Poppins;
-    src: url(../fonts/Poppins-Bold.ttf);
- }
 
-h1{
-    font-family: Poppins;
-    font-size: 2.1875em;
-    
-}
-h3{
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - start index - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
 
-    font-size: 1.3em; 
-}
-    
-
-.h--meio{
-    text-align: center;
-    color: rgb(221, 1, 5);
-    font-family: Arial, Helvetica, sans-serif;
-}
-.container{
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 0 auto;
+.best_recipes {
+    border: 1px solid black;
+    padding: 15px;
 }
 
-.layout-rodape{
-    padding: 1px 0;
-    position: absolute;
-    width: 100%;
+.best_recipes .title {
+    text-decoration: underline;
+}
+
+.best_recipes ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.best_recipes ul li{
+    margin: auto;
+}
+
+.bg_img {
+    display: block;
+    position: relative;
+    padding: 10px 0;
+}
+
+.bg_img::after {
+    content: "";
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
     bottom: 0;
-    background-color: #8f8f8f;
-    color: #ffe8d8;
-    text-align: center;
-}
-ul,ol{
-    font-size: 1.2em;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
-.hide{
-    display: none;
-}
-
-.noMaginRight{
-    margin-right: inherit;
-}
-
-.noMaginLeft{
-    margin-left: inherit;
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - end index - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 /* - start preloader - */
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* Preloader */
 #preloaderPage {
     position: fixed;
     top: 0;
@@ -214,7 +147,8 @@ ul,ol{
     height: 50px;
     border-radius: 100%;
     position: relative;
-    margin: 0 auto; }
+    margin: 0 auto;
+}
 
 #loader-1:before, #loader-1:after {
     content: "";
@@ -225,70 +159,161 @@ ul,ol{
     height: 100%;
     border-radius: 100%;
     border: 7px solid transparent;
-    border-top-color: #20324fe0; }
+    border-top-color: #20324fe0;
+}
 
 #loader-1:before {
     z-index: 100;
-    animation: spin 2s infinite; }
+    animation: spin 2s infinite;
+}
 
 #loader-1:after {
-    border: 7px solid #72b2b46b; }
+    border: 7px solid #72b2b46b;
+}
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - end preloader - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - start navbar - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+}
+
+.navbar-color {
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar img {
+    cursor: pointer;
+    width: 70px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin: auto;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #8f8f8f;
+    color: #ffe8d8;
+    text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+    .navbar {
+        position: relative;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - end navbar - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - start tools - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.hide {
+    display: none;
+}
+
+.noMagin {
+    margin: 0 !important;
+}
+
+.noPading {
+    padding: 0 !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         -o-transform: rotate(0deg);
-        transform: rotate(0deg); }
+        transform: rotate(0deg);
+    }
     100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
-        transform: rotate(360deg); }
+        transform: rotate(360deg);
+    }
 }
+
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - end preloader - */
+/* - end tools - */
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
-
-#navbar{
-    width: 100%;
-}
-
-.navbar{
-    background-color: #ffffff;
-}
-
-.navbar .menu{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.nav-item{
-    display: inline-block;
-    margin: auto;
-}
-
-.nav-item img{
-    width: 100px;
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item a{
-    text-decoration: none;
-    color: black;
-}
-.nav-item a:hover{
-    text-decoration: underline;
-    color: black;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
