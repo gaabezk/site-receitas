@@ -144,15 +144,6 @@ body {
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - start receitas - */
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-
-
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - end receitas - */
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
 /* - start index - */
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 
@@ -169,10 +160,41 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .best_recipes ul li{
     margin: auto;
+}
+
+.best_recipes ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.best_recipes ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.best_recipes ol li{
+    margin: auto;
+    counter-increment: li
+}
+
+.best_recipes ol li::before {
+    content: counter(li);
+    color: red;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl
 }
 
 .bg_img {
