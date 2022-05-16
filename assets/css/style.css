@@ -10,6 +10,7 @@ body {
     -webkit-animation: fadein 3s; /* Safari and Chrome */
     -o-animation: fadein 3s; /* Opera */
     min-height: 100vh;
+    height: auto;
     position: relative;
     font-family: Poppins, serif;
 }
@@ -19,6 +20,15 @@ body {
     padding-bottom: 2.5rem;
 }
 
+@media screen and (max-width: 769px) {
+    .main {
+        padding-bottom: 4rem;
+    }
+}
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - start produtos - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
 .produto {
     width: 100%;
 }
@@ -28,10 +38,42 @@ body {
     width: 50%;
 }
 
-.imgposicao {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.imagen-produto img {
+    width: 100%;
+    height: 370px;
+}
+
+.sobre-produto {
+    float: left;
+    width: 50%;
+    height: 370px;
+    background: linear-gradient(94.78deg, #dd0105, #b30003);
+    padding: 10px;
+    text-align: left;
+    color: white;
+    line-height: 1.8;
+}
+
+.sobre-produto .att{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 769px) {
+    .imagen-produto {
+        float: none;
+        width: 100%;
+    }
+
+    .imagen-produto img {
+        width: 100%;
+        height: 230px;
+    }
+
+    .sobre-produto {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .receitas {
@@ -39,6 +81,17 @@ body {
     border-radius: 360px 90px 360px 90px;
     background: linear-gradient(94.78deg, #cb0000, #ff8000);
     color: white;
+    min-height: 235px;
+    margin-bottom: 25px;
+}
+
+.receitas img {
+    position: absolute;
+    top: 3%;
+    left: 9%;
+    height: 220px;
+    width: 310px;
+    border-radius: 60px;
 }
 
 .receitas h1 {
@@ -63,23 +116,41 @@ body {
     text-shadow: 1px 1px 6px #000000;
 }
 
-.imagen-produto img {
-    width: 100%;
-    height: 340px;
+@media screen and (max-width: 769px) {
+    .receitas {
+        position: unset;
+        border-radius: 20px;
+        text-align: center;
+        padding: 10px 0;
+    }
 
+    .receitas img {
+        position: unset;
+    }
+
+    .receitas h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .receitas p {
+        margin: 0;
+        text-align: center;
+    }
 }
 
-.sobre-produto {
-    float: left;
-    width: 50%;
-    height: 340px;
-    /* background-color: #dd0105; */
-    background: linear-gradient(94.78deg, #dd0105, #b30003);
-    padding: 10px;
-    text-align: left;
-    color: white;
-    line-height: 1.8;
-}
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - end produtos - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - start receitas - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+
+
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
+/* - end receitas - */
+/*- ---------------------------------------------------------------------------------------------------------------- -*/
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 /* - start index - */
@@ -233,8 +304,8 @@ body {
 
 @media screen and (max-width: 769px) {
     .navbar {
-        position: relative;
-        background-color: rgb(255, 255, 255);
+        position: relative !important;
+        background-color: rgb(255, 255, 255) !important;
     }
 }
 
