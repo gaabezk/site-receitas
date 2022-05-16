@@ -17,13 +17,6 @@ body {
 
 .main {
     margin: 0;
-    padding-bottom: 2.5rem;
-}
-
-@media screen and (max-width: 769px) {
-    .main {
-        padding-bottom: 4rem;
-    }
 }
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
@@ -139,35 +132,27 @@ body {
     }
 }
 
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - end produtos - */
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - start index - */
-/*- ---------------------------------------------------------------------------------------------------------------- -*/
-
-.best_recipes {
+.box {
     border: 1px solid black;
     padding: 15px;
 }
 
-.best_recipes .title {
+.box .title {
     text-decoration: underline;
 }
 
-.best_recipes ul {
+.box ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
 }
 
-.best_recipes ul li{
+.box ul li{
     margin: auto;
 }
 
-.best_recipes ul li::before {
+.box ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: red; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
@@ -176,17 +161,17 @@ body {
     margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
-.best_recipes ol {
+.box ol {
     list-style: none;
     counter-reset: li;
 }
 
-.best_recipes ol li{
+.box ol li{
     margin: auto;
     counter-increment: li
 }
 
-.best_recipes ol li::before {
+.box ol li::before {
     content: counter(li);
     color: red;
     display: inline-block;
@@ -201,6 +186,7 @@ body {
     display: block;
     position: relative;
     padding: 10px 0;
+    min-height: 525px;
 }
 
 .bg_img::after {
@@ -218,7 +204,7 @@ body {
 }
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
-/* - end index - */
+/* - end produtos - */
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
 
 /*- ---------------------------------------------------------------------------------------------------------------- -*/
@@ -316,9 +302,7 @@ body {
 
 .footer {
     padding: 10px 0;
-    position: absolute;
     width: 100%;
-    bottom: 0;
     background-color: #8f8f8f;
     color: #ffe8d8;
     text-align: center;
